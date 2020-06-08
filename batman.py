@@ -32,7 +32,7 @@ def batman(x):
   return 0
 
 
-sampling_interval=0.1
+sampling_interval=0.05
 fpath_xpts = np.arange(-21.0, 21.0+sampling_interval, sampling_interval)
 fpath_ytop = np.array([batman(x)    for x in fpath_xpts])
 fpath_ybot = np.array([batman(x+14) for x in fpath_xpts])
