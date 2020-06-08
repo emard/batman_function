@@ -12,20 +12,20 @@ def batman(x):
   x = fabs(x)
   x = fmod(fabs(x+14),28)-14
   x = fabs(x)
-  if x <= 0.5:
+  if x < 0.5:
     return 2.25
-  if x <= 0.75:
+  if x < 0.75:
     return 3*x+0.75
-  if fabs(x) <= 1:
+  if x < 1:
     return 9-8*x
-  if fabs(x) <= 3:
+  if x < 3:
     return 1.5-x/2-6*sqrt(10)/14*(sqrt(3-x**2+2*x)-2)
-  if fabs(x) <= 7:
+  if x < 7:
     return 3*sqrt(1-(x/7)**2)
   # renormalize x for bottom part
   x = fmod(fabs(x+7),14)-7
   x = fabs(x)
-  if x <= 4:
+  if x < 4:
     return x/2-(3*sqrt(33)-7)/112*x**2+sqrt(1-(fabs(x-2)-1)**2)-3
   if x <= 7:
     return -3*sqrt(-(x/7)**2+1)
