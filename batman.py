@@ -6,7 +6,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from math import fabs,sqrt,fmod
 
-# period = 28
+# period = 28, amplitude = -3..+3
 def batman(x):
   # top part
   x = fabs(x)
