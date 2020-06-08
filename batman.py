@@ -5,11 +5,21 @@
 def batman_top(x):
   if fabs(x) <= 4:
     return fabs(x/2)-(3*sqrt(33)-7)/112*x**2+sqrt(1-(fabs(fabs(x)-2)-1)**2)-3
-  if fabs(x) >= 4 and fabs(x) <= 7:
+  if fabs(x) <= 7:
     return -3*sqrt(-(x/7)**2+1)
   return 0
 
 def batman_bot(x):
+  if fabs(x) <= 0.5:
+    return 2.25
+  if fabs(x) <= 0.75:
+    return 3*fabs(x)+0.75
+  if fabs(x) <= 1:
+    return 9-8*fabs(x)
+  if fabs(x) <= 3:
+    return 1.5-fabs(x/2)-6*sqrt(10)/14*(sqrt(3-x**2+2*fabs(x))-2)
+  if fabs(x) <= 7:
+    return 3*sqrt(1-(x/7)**2)
   return 0
 
 import numpy as np
